@@ -31,19 +31,16 @@ void main(){
     else if(num>100 && num<=999){
         int one=num%10,temp=num;
         temp/=10;
-        int hun=temp/10;
-        int ten=temp%10;
         if(one!=0){
-            printf("%s hundred and %s %s",ones[hun],tens2[ten-2],ones[one]);
+            printf("%s hundred and %s %s",ones[temp/10],tens2[(temp%10)-2],ones[one]);
         }
-        else if(ten==0 && one == 0){
-             printf("%s hundred %s",ones[hun],tens2[ten-2]);
+        else if(temp%10==0 && one == 0){
+             printf("%s hundred %s",ones[temp/10],tens2[(temp%10)-2]);
         }
         else{
-            printf("%s hundred and %s",ones[hun],tens2[ten-2]);
+            printf("%s hundred and %s",ones[temp/10],tens2[(temp%10)-2]);
             }
         }
     }
 
 }
-
